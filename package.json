@@ -1,0 +1,10 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/Donald-desing/-social-media-platform.git",
+  "dependencies": {
+    // your dependencies
+  },
+  // rest of your package.json
+}
