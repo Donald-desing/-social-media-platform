@@ -1,17 +1,17 @@
 {
-  "name": "frontend",
+  "name": "social-media-platform",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Donald-desing/-social-media-platform.git",
+  "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
+    // other dependencies
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "react-scripts build"
+    // other scripts
   }
 }
