@@ -1,17 +1,19 @@
+// src/firebaseConfig.js
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration using environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyABLIr75CKN1qw0_wEcWj4xWVEMev33mMo",
-  authDomain: "social-media-platform-3555d.firebaseapp.com",
-  projectId: "social-media-platform-3555d",
-  storageBucket: "social-media-platform-3555d.firebasestorage.app",
-  messagingSenderId: "58212375662",
-  appId: "1:58212375662:web:ae8e9cbbb1549f019eda7f"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+export default app;
