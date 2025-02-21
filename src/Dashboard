@@ -1,0 +1,21 @@
+// src/Dashboard.js
+
+import React from 'react';
+import { signOut } from 'firebase/auth';
+import { auth } from './firebaseConfig';
+
+function Dashboard() {
+  const handleLogout = async () => {
+    await signOut(auth);
+  };
+
+  return (
+    <div>
+      <h2>Dashboard</h2>
+      <p>Welcome, {auth.currentUser.email}!</p>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  );
+}
+
+export default Dashboard;
