@@ -1,15 +1,14 @@
 // src/HomePage.js
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function HomePage() {
   return (
     <div>
       <h1>Welcome to the Social Media Platform</h1>
-      <Link to="/register">Register</Link>
+      <NavLink to="/register">Register</NavLink>
       <br />
-      <Link to="/login">Login</Link>
+      <NavLink to="/login">Login</NavLink>
     </div>
   );
 }
