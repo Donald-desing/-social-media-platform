@@ -1,19 +1,31 @@
-// Incorrect
-<ErrorBoundary> {/* No assignment or function call */}
-    {children}
-</ErrorBoundary>;
+// src/ErrorBoundary.js
 
-// Correct (if you are just rendering the ErrorBoundary)
-return (
-    <ErrorBoundary>
-        {children}
-    </ErrorBoundary>
-);
+import React from 'react';
 
-// Correct (if you are assigning the result to a variable)
-const errorBoundaryElement = (
-    <ErrorBoundary>
-        {children}
-    </ErrorBoundary>
-);
-return errorBoundaryElement;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    // Update state so the next render shows the fallback UI.
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // You can also log the error to an error reporting service
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // You can render any custom fallback UI
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
