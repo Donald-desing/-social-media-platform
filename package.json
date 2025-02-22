@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint": "^8.0.0",
     "@eslint/object-schema": "^2.0.0",
-    "@eslint/config-array": "^2.0.0",
+    "@eslint/config-array": "^0.19.2",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
