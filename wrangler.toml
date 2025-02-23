@@ -1,32 +1,28 @@
-name = "my-social-media-platform"  # Replace with your project name
-type = "javascript" # or "webpack" if you use webpack
+name = "social-media-platform"
+type = "javascript"  # Or "webpack" if you use webpack explicitly
 
 [build]
-command = "npm run build" # Your build command (important: this triggers the Docker build)
-# or if you are using webpack and not docker
-# command = "webpack"
-# you may need to specify the directory where the built files are located
-# dir = "dist" # or "build", or whatever your webpack config uses
+command = "npm run build"  # Your build command (this triggers the Docker build)
+pages_build_output_dir = "build"  # The directory where your build command outputs files
 
-[vars] # Optional: Environment variables
+# Optional: Environment variables
+# [vars]
 # API_URL = "https://api.example.com"
 
-# If you're using a specific Cloudflare Worker, uncomment and configure:
-# [worker]
-# name = "my-worker-name"
-# compatibility_date = "2023-10-25" # Or latest
-
-# If you have environment-specific settings (like dev/prod):
+# Optional: Environment-specific settings
 # [env.production]
-# name = "my-social-media-platform-prod"
+# name = "social-media-platform-prod"
 # [env.production.vars]
 # API_URL = "https://api.production.example.com"
 
 # [env.development]
-# name = "my-social-media-platform-dev"
+# name = "social-media-platform-dev"
 # [env.development.vars]
 # API_URL = "http://localhost:3001/api"
 
 
-# For static sites (like your React app), you likely don't need a worker.
-# Cloudflare Pages will serve the static files directly.
+# If you are using webpack and not docker, use this instead of the command property:
+# type = "webpack"
+# [build]
+# dir = "build" # or "dist" or whatever your webpack config uses
+# pages_build_output_dir = "build"
