@@ -1,20 +1,34 @@
-// src/App.js or a similar main file
+// src/Dashboard.js
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { signOut } from 'firebase/auth'; // Import signOut
+import { auth } from './firebaseConfig'; // Import your Firebase auth instance
 
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Dashboard from './Dashboard';
+const Dashboard = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
 
-function App() {
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth); // Sign out from Firebase
+      navigate('/login'); // Redirect to login page after successful sign-out
+      console.log('User signed out successfully'); // Log success message
+    } catch (error) {
+      console.error('Error signing out:', error); // Log any errors
+    }
+  };
+
   return (
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route path="/dashboard" component={Dashboard} />
-          {/* Add other routes as needed */}
-        </Switch>
-      </Suspense>
-    </Router>
-  );
-}
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome to your dashboard!</p>
 
-export default App;
+      {/* Add your dashboard content here */}
+      {/* Example: Display user information */}
+      {/* <p>User Email: {auth.currentUser?.email}</p> */}
+
+      <button onClick={handleSignOut}>Sign Out</button>
+    </div>
+  );
+};
+
+export default Dashboard;
