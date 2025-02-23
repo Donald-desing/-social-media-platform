@@ -1,7 +1,5 @@
-// src/App.js
-
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Import Navigate
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebaseConfig';
 import Register from './Register';
@@ -25,6 +23,9 @@ function App() {
         {user ? (
           <>
             <Route path="/" element={<Dashboard />} />
+            {/* Redirect logged-in users from /register and /login */}
+            <Route path="/register" element={<Navigate to="/" />} />
+            <Route path="/login" element={<Navigate to="/" />} />
           </>
         ) : (
           <>
