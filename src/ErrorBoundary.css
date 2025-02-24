@@ -1,0 +1,30 @@
+/* src/ErrorBoundary.css */
+.error-boundary-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.error-boundary-container h1 {
+    color: #d32f2f; /* Red error heading */
+}
+
+.error-boundary-container details {
+    background-color: #eee; /* Light gray for details background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.error-boundary-container summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.error-boundary-container pre {
+    white-space: pre-wrap; /* Allow wrapping of long error messages */
+    overflow-x: auto; /* Add horizontal scroll if needed */
+}
