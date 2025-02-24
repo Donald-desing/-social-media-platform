@@ -4,25 +4,3 @@ type = "javascript"  # Or "webpack" if you use webpack explicitly
 [build]
 command = "npm run build"  # Your build command (this triggers the Docker build)
 pages_build_output_dir = "build"  # The directory where your build command outputs files
-
-# Optional: Environment variables
-# [vars]
-# API_URL = "https://api.example.com"
-
-# Optional: Environment-specific settings
-# [env.production]
-# name = "social-media-platform-prod"
-# [env.production.vars]
-# API_URL = "https://api.production.example.com"
-
-# [env.development]
-# name = "social-media-platform-dev"
-# [env.development.vars]
-# API_URL = "http://localhost:3001/api"
-
-
-# If you are using webpack and not docker, use this instead of the command property:
-# type = "webpack"
-# [build]
-# dir = "build" # or "dist" or whatever your webpack config uses
-# pages_build_output_dir = "build"
