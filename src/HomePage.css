@@ -1,28 +1,50 @@
 /* src/HomePage.css */
 .home-page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  height: 100vh; /* Make it full viewport height */
-  background-color: #f0f0f0; /* Example background color */
-  font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
 }
 
 .home-page-container h1 {
-  margin-bottom: 20px;
-  color: #333; /* Darker heading color */
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.home-page-container a {
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #007bff; /* Blue button */
-  color: white;
-  text-decoration: none; /* Remove underlines from links */
-  border-radius: 5px;
+.home-page-container p {
+    margin-bottom: 30px; /* Space between description and buttons */
+    text-align: center; /* Center the description text */
+    max-width: 600px; /* Limit the width of the description */
 }
 
-.home-page-container a:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+
+.cta-button { /* Style for the buttons */
+    padding: 12px 25px; /* Increased padding */
+    margin: 0 10px; /* Space between buttons */
+    background-color: #007bff; /* Blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold; /* Make the text bolder */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 10px 20px; /* Smaller padding on smaller screens */
+        margin: 10px 5px; /* Adjust margins */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .home-page-container p {
+        font-size: 0.95rem; /* Slightly smaller font for description */
+    }
 }
