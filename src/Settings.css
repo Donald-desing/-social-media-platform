@@ -1,0 +1,38 @@
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.settings-container label {
+  margin-bottom: 5px;
+}
+
+.settings-container input[type="text"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 200px; /* Adjust width as needed */
+}
+
+.settings-container button {
+  padding: 10px 15px;
+  background-color: #007bff; /* Example blue button */
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.settings-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
