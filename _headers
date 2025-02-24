@@ -1,0 +1,66 @@
+```
+/*
+  This _headers file configures HTTP headers for your Cloudflare Pages deployment.
+  Place this file in the root of your project and it will be copied to the build directory.
+*/
+
+/*
+  Example: Secure your application
+  This section adds security headers to all pages under /app/.
+*/
+/app/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: document-domain=()  /* Adjust as needed */
+  Content-Security-Policy: script-src 'self'; frame-ancestors 'none'; /* Customize CSP */
+
+/*
+  Example: Control access to static assets
+  This section configures CORS for files in the /static/ directory.
+  IMPORTANT: Replace * with specific origins if possible for better security.
+*/
+/static/*
+  Access-Control-Allow-Origin: *  /* Use with caution! */
+  X-Robots-Tag: nosnippet
+
+/*
+  Example: Prevent indexing of staging deployments
+  This section prevents search engines from indexing your staging environment.
+  Replace myproject.pages.dev with your actual staging domain.
+*/
+https://*.pages.dev/* /* Replace with your staging domain pattern */
+  X-Robots-Tag: noindex
+
+/*
+  Example: Set headers for specific files
+*/
+/images/*.jpg
+  Cache-Control: public, max-age=31536000  /* Cache images for 1 year */
+
+/js/*.js
+  Content-Type: application/javascript
+
+/*
+  Example: Detach a header from a broader rule
+*/
+/*
+  The following rule would generally apply to all files.
+*/
+/*
+/*
+  Content-Security-Policy: default-src 'self';
+*/
+
+/*
+  But if you want to remove the Content-Security-Policy header for .jpg files:
+*/
+/*.jpg
+  ! Content-Security-Policy
+*/
+
+
+/*
+  Remember to run `npm run build` after making changes to this file.
+*/
+```
