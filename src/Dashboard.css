@@ -1,0 +1,49 @@
+/* src/Dashboard.css */
+
+.dashboard-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+  font-family: sans-serif;
+  min-height: 100vh; /* Ensure full viewport height */
+  background-color: #f4f4f4; /* Light background color */
+}
+
+.dashboard-container h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.dashboard-container p {
+  margin-bottom: 5px;
+}
+
+.dashboard-container button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.dashboard-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Add more styles as needed */
+
+/* Example for user info section */
+.dashboard-container .user-info { /* Add a class to the user info div */
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.dashboard-container .user-info p {
+    margin-bottom: 8px;
+}
