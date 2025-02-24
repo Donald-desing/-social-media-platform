@@ -1,0 +1,28 @@
+/* src/HomePage.css */
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Make it full viewport height */
+  background-color: #f0f0f0; /* Example background color */
+  font-family: sans-serif;
+}
+
+.home-page-container h1 {
+  margin-bottom: 20px;
+  color: #333; /* Darker heading color */
+}
+
+.home-page-container a {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  text-decoration: none; /* Remove underlines from links */
+  border-radius: 5px;
+}
+
+.home-page-container a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
