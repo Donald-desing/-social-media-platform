@@ -1,4 +1,3 @@
-```
 /*
   This _headers file configures HTTP headers for your Cloudflare Pages deployment.
   Place this file in the root of your project and it will be copied to the build directory.
@@ -61,6 +60,14 @@ https://*.pages.dev/* /* Replace with your staging domain pattern */
 
 
 /*
+  Specific headers for your application's domain
+*/
+https://a22c163e.social-media-platform-6x9.pages.dev/*  /* Your Cloudflare Pages URL */
+  X-Frame-Options: SAMEORIGIN  /* Or DENY if you don't need iframes */
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  /* Add other security headers as needed */
+
+/*
   Remember to run `npm run build` after making changes to this file.
 */
-```
