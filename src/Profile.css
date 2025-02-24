@@ -1,0 +1,25 @@
+.profile-container {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center;    /* Center horizontally */
+  padding: 20px;
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px;      /* Rounded corners */
+  margin: 20px;
+}
+
+.profile-container h1 {
+  margin-bottom: 20px;
+}
+
+.profile-container p {
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Make it circular */
+  margin-top: 10px;
+  object-fit: cover; /* Prevent image distortion */
+}
